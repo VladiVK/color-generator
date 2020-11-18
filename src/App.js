@@ -6,11 +6,10 @@ import SingleColor from './SingleColor';
 import Values from 'values.js';
 
 function App() {
-  const defaultColor = '#5cf50a'
+  const defaultColor = '#5cf50a';
   const [color, setColor] = useState('');
   const [err, setErr] = useState(false);
   const [list, setList] = useState(new Values(defaultColor).all(10));
-
 
   const handleSUbmit = (e) => {
     e.preventDefault();
@@ -22,8 +21,6 @@ function App() {
       setErr(true);
       console.log('ERROR !!!');
     }
-
-    // setColor('');
   };
 
   return (
@@ -46,7 +43,6 @@ function App() {
 
       <section className='colors'>
         {list.map((color, index) => {
-          
           return (
             <SingleColor
               key={index}
